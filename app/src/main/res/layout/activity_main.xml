@@ -7,16 +7,16 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/higherButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/roll_die"
+        android:text="Higher"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/lowerButton"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintVertical_bias="0.622" />
 
     <ImageView
         android:id="@+id/dieImageView"
@@ -25,11 +25,42 @@
         android:layout_marginTop="200dp"
         android:layout_marginBottom="100dp"
         android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/higherButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/die1" />
+
+    <TextView
+        android:id="@+id/scoreStringText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        app:layout_constraintBottom_toTopOf="@+id/dieImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currentScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/dieImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreStringText" />
+
+    <Button
+        android:id="@+id/lowerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lower"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
